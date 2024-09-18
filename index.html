@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale:1" />
+    <title>Flex Boxes</title>
+    <style>
+
+        * {
+            text-decoration:none;
+            color:black;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color:skyblue;
+            margin:0;
+        }
+
+
+        #container1 {
+            display: flex;
+            flex-flow: row wrap;
+            flex-direction: row;
+            justify-content:center;
+            background-color: pink;
+            width:100vw;
+            height:400px;
+            text-align:center;
+            margin-top:10px;
+            border: 3px groove #FAA0A0;
+            transition: all 200ms 0ms ;
+        }
+        #container1:hover {
+            background-color: rgb(255, 100, 226);
+            flex-direction:row-reverse;
+            justify-content: space-around;
+        }
+
+        #container2 {
+            display: flex;
+            margin-top:100px;
+            background-color: pink;
+            width:100vw;
+            height:400px;
+            align-items:center;    
+            justify-content:center;
+            text-align:center;
+            border: 3px groove #FAA0A0;
+        }
+        #navcontainer {
+            background-color:pink;
+            height:70px;
+            width:100vw;
+            display: flex;
+            align-items:center;    
+            justify-content:space-evenly;
+
+        }
+        .navbuttons>a>h2:hover {
+            color:white;
+        }
+
+        #listcontainer {
+            width:40vw;
+            height:20vh;
+            background-color:pink;
+            margin: 0 auto;
+            margin-bottom:100px;
+            margin-top:100px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+        }
+
+        p {
+            width:inherit;
+            height:inherit;
+            color:black;
+            transition: color 2s 500ms;
+        }
+        p:hover{
+            color:white;
+
+        }
+
+        li:nth-child(odd) {
+            background-color:gray
+        }
+
+        #item1 {
+            background-color: red;
+            width:100px;
+            height:100px;
+            margin:0 auto;
+            margin-top:150px;
+        }
+        #item2 {
+            background-color: orange;
+            width:100px;
+            height:100px;
+            margin:0 auto;
+            margin-top:150px;
+
+        }
+        #item3 {
+            background-color: yellow;
+            width:100px;
+            height:100px;
+            margin:0 auto;
+            margin-top:150px;
+
+        }
+        #item4 {
+            background-color: green;
+            width:100px;
+            height:100px;
+            margin:0 auto;
+            margin-top:150px;
+
+        }
+        #item5 {
+            background-color: blue;
+            width:100px;
+            height:100px;
+            margin:0 auto;
+            margin-top:150px;
+
+        }
+        #singleitem {
+            background-color: grey;
+            width:200px;
+            height:200px; 
+            position:relative;
+        }
+
+    </style>
+</head>
+<body>
+    <nav id="navcontainer">
+        <div class="navbuttons"><a href="#navcontainer"><h2>Home</h2></a></div>
+        <div class="navbuttons"><a href="#listcontainer"><h2>Bottom</h2></a></div>
+    </nav>
+<div id="container1">
+      <div id="item1"><p>1</p></div>
+      <div id="item2"><p>2</p></div>
+      <div id="item3"><p>3</p></div>
+      <div id="item4"><p>4</p></div>
+      <div id="item5"><p>5</p></div>
+</div>
+<div class="flexcontainer" id="container2">
+    <div id="singleitem"></div>
+</div>
+<div id="listcontainer">
+    <h2>Best Flex Directions</h2>
+    <ol>
+        <li>Row</li>
+        <li class="odd">Column</li>
+        <li>Column-Reverse</li>
+        <li class="odd">Row-Reverse</li>
+    </ol>
+</div>
+</body>
+</html>
